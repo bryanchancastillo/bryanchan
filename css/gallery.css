@@ -1,0 +1,74 @@
+/* ===== GALLERY CARDS ===== */
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+    display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    color: #fff;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0)
+    );
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.portfolio-item:hover .portfolio-card img {
+    transform: scale(1.08);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 992px) {
+    .portfolio-card img {
+        height: 300px;
+    }
+}
+
+/* ===== MODAL / LIGHTBOX ===== */
+.gallery-modal-content {
+    background: transparent !important;
+    border: none !important;
+}
+
+.modal-body {
+    position: relative;
+    animation: galleryZoomIn 0.25s ease;
+}
+
+@keyframes galleryZoomIn {
+    from { transform: scale(0.97); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+
+/* Make backdrop darker */
+.modal-backdrop.show {
+    opacity: 0.85;
+}
