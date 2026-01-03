@@ -72,3 +72,22 @@
 .modal-backdrop.show {
     opacity: 0.85;
 }
+
+
+/* === FIX click / focus portfolio === */
+.portfolio-item {
+  cursor: pointer;
+}
+
+.portfolio-item:focus,
+.portfolio-item:active,
+.portfolio-item:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Evita selección visual de la imagen */
+.portfolio-card img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
