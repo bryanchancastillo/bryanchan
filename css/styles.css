@@ -11732,3 +11732,9 @@ html {
     left: -2vw;
   }
 }
+
+.navbar-logo {
+  height: 36px;   /* ideal para navbar */
+  width: 36px;
+ 
+}
