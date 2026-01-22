@@ -81,9 +81,12 @@
 
               <div class="fs-3 fw-light text-muted">I build systems that</div>
 
-              <h1 class="display-3 fw-bolder mb-4 reveal-bounce">
-                <span class="text-gradient d-inline">save time and help businesses run smoother</span>
+              <h1 class="display-3 fw-bolder mb-4">
+                <span class="text-gradient d-inline-block reveal-bounce">
+                  save time and help businesses run smoother
+                </span>
               </h1>
+
 
               <p class="lead text-muted mb-5">
                 React + .NET developer focused on real-world products: dashboards, internal tools, invoicing systems,
@@ -523,35 +526,59 @@
   <script src="js/scripts.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    (function initReveal() {
       const targets = document.querySelectorAll(".reveal-fade, .reveal-bounce");
+      if (!targets.length) return;
+
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             const el = entry.target;
 
-            if (entry.isIntersecting) {
-              // Para el bounce: reinicia la animación cada vez
-              if (el.classList.contains("reveal-bounce")) {
+            // FADE: simple
+            if (el.classList.contains("reveal-fade")) {
+              if (entry.isIntersecting) el.classList.add("is-visible");
+              else el.classList.remove("is-visible");
+              return;
+            }
+
+            // BOUNCE: solo al "entrar" (una vez), y se resetea cuando sale 100%
+            if (el.classList.contains("reveal-bounce")) {
+              if (entry.isIntersecting) {
+                if (el.dataset.played === "1") return; // ya se animó en esta entrada
+                el.dataset.played = "1";
+
                 el.classList.remove("is-visible");
                 void el.offsetWidth; // reset animation
                 el.classList.add("is-visible");
               } else {
-                // Para fade: solo toggle normal
-                el.classList.add("is-visible");
+                // si ya NO está intersectando en nada, permite que se anime otra vez al volver
+                if (entry.intersectionRatio === 0) {
+                  el.dataset.played = "0";
+                  el.classList.remove("is-visible");
+                }
               }
-            } else {
-              el.classList.remove("is-visible");
             }
           });
         },
-        { threshold: 0.3 }
+        {
+          threshold: [0, 0.15],      // evita spam
+          rootMargin: "0px 0px -15% 0px"
+        }
       );
 
-      targets.forEach((el) => observer.observe(el));
-    });
+      targets.forEach((el) => {
+        el.dataset.played = "0";
+        observer.observe(el);
+      });
+    })();
   </script>
+
 
 
 
