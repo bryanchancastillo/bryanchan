@@ -110,7 +110,7 @@
                 <div class="text-uppercase">Contact &middot; Fast Response &middot; Direct Links</div>
               </div>
 
-              <h1 class="display-5 fw-bolder mb-3">
+              <h1 class="display-5 fw-bolder mb-3 reveal-bounce">
                 <span class="text-gradient d-inline">Let’s build something that saves you time</span>
               </h1>
 
@@ -286,6 +286,42 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
+
+   <!-- Reveal JS (Fade + Bounce) -->
+  <script>
+    (function initReveal() {
+      const targets = document.querySelectorAll(".reveal-fade, .reveal-bounce");
+      if (!targets.length) return;
+
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+
+            if (entry.isIntersecting) {
+              if (el.classList.contains("reveal-bounce")) {
+                el.classList.remove("is-visible");
+                void el.offsetWidth; // reset animation
+                el.classList.add("is-visible");
+              } else {
+                el.classList.add("is-visible");
+              }
+            } else {
+              el.classList.remove("is-visible");
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+      );
+
+      targets.forEach((el) => observer.observe(el));
+    })();
+  </script>
 
 </body>
 
