@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Technology | Bryan Chan</title>
+
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+
+  <!-- PNG favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+
+  <!-- Apple Touch Icon (iOS) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+  <!-- Android / PWA icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <!-- Theme color (Android status bar / browser UI) -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- Page-only helpers (tiny) -->
+  <style>
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .55rem .85rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .04);
+      font-weight: 600;
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+
+    .tech-badge i {
+      opacity: .85;
+    }
+
+    .tech-card {
+      border: 0;
+      border-radius: 1.25rem;
+      box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .06);
+    }
+
+    .tech-list .list-group-item {
+      border: 0;
+      background: rgba(0, 0, 0, .03);
+      border-radius: 1rem;
+      margin-bottom: .75rem;
+      padding: 1rem 1.1rem;
+    }
+
+    .tech-muted {
+      color: rgba(0, 0, 0, .62);
+    }
+
+    .kpi {
+      background: rgba(0, 0, 0, .03);
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      height: 100%;
+    }
+
+    .kpi .label {
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .kpi .value {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin: .25rem 0 .25rem;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+  <main class="flex-shrink-0">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container px-5">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="assets/bryanlogo.svg" alt="Bryan Chan logo" class="navbar-logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="technology.html">Technology</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+<header class="py-5">
+  <div class="container px-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+
+        <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+          <div class="text-uppercase">Technology & Tools</div>
+        </div>
+
+        <h1 class="display-5 fw-bolder mb-3">
+          <span class="text-gradient d-inline-block reveal-bounce">
+            How I build products
+          </span>
+        </h1>
+
+        <p class="lead mb-4 tech-muted">
+          This page is for technical reviewers and teams. My focus is building reliable, scalable web apps with a
+          clean UI, secure auth, and solid database design.
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+          <span class="tech-badge"><i class="bi bi-braces"></i> React</span>
+          <span class="tech-badge"><i class="bi bi-code-slash"></i> TypeScript</span>
+          <span class="tech-badge"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+          <span class="tech-badge"><i class="bi bi-server"></i> .NET / C#</span>
+          <span class="tech-badge"><i class="bi bi-database"></i> MySQL</span>
+          <span class="tech-badge"><i class="bi bi-git"></i> GitHub</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- CONTENT -->
+    <section class="pb-5">
+      <div class="container px-5">
+
+        <div class="row g-4">
+
+          <!-- Frontend -->
+          <div class="col-12 col-lg-6">
+            <div class="card tech-card h-100 reveal-fade">
+              <div class="card-body p-4 p-md-5">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+                    <i class="bi bi-window"></i>
+                  </div>
+                  <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Frontend</span></h3>
+                </div>
+
+                <p class="tech-muted mb-4">
+                  Modern UI with strong typing, reusable components, forms, validation, and clean layout.
+                </p>
+
+                <div class="tech-list">
+                  <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>React</strong> + component-driven UI</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>TypeScript</strong> for safer code</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Vite</strong> + modern tooling</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Bootstrap</strong> + responsive layout</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Sass/SCSS</strong> styling & structure</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Axios</strong> + API integration</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>React Hook Form</strong> + validation</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="col-12 col-lg-6">
+            <div class="card tech-card h-100 reveal-fade">
+              <div class="card-body p-4 p-md-5">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+                    <i class="bi bi-server"></i>
+                  </div>
+                  <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Backend</span></h3>
+                </div>
+
+                <p class="tech-muted mb-4">
+                  API-first backend with authentication, roles, and clean domain modeling.
+                </p>
+
+                <div class="tech-list">
+                  <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>.NET</strong> (ASP.NET Core) APIs</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>C#</strong> domain logic & services</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>REST</strong> endpoints & integrations</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Auth</strong> (login, roles, permissions)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Multi-tenant patterns</strong> when needed</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Validation</strong> & error handling</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="col-12 col-lg-6">
+            <div class="card tech-card h-100 reveal-fade">
+              <div class="card-body p-4 p-md-5">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+                    <i class="bi bi-database"></i>
+                  </div>
+                  <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Database</span></h3>
+                </div>
+
+                <p class="tech-muted mb-4">
+                  Solid schemas, relationships, migrations, and practical querying for real business data.
+                </p>
+
+                <div class="tech-list">
+                  <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>MySQL</strong> / SQL</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Entity Framework Core</strong> migrations</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Data modeling</strong> (1:1, 1:N, N:N)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Indexes</strong> & performance basics</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Auditing logs</strong> & tracking</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Tooling / Delivery -->
+          <div class="col-12 col-lg-6">
+            <div class="card tech-card h-100 reveal-fade">
+              <div class="card-body p-4 p-md-5">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+                    <i class="bi bi-wrench-adjustable-circle"></i>
+                  </div>
+                  <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Tooling & Delivery</span></h3>
+                </div>
+
+                <p class="tech-muted mb-4">
+                  Practical workflows for building, versioning, and shipping.
+                </p>
+
+                <div class="tech-list">
+                  <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Git</strong> & <strong>GitHub</strong></div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>npm</strong> scripts & project structure</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Deployment</strong> & hosting basics</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>3rd-party integrations</strong> (APIs)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Canva</strong> + visual assets for web</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Image optimization</strong> for performance</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="card tech-card mt-4 reveal-fade">
+          <div class="card-body p-4 p-md-5 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+            <div>
+              <h4 class="fw-bolder mb-1">Want to see it in action?</h4>
+              <p class="mb-0 tech-muted">Check the Projects page for real screens and examples.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <a class="btn btn-outline-dark fw-bolder" href="projects.html">View Projects</a>
+              <a class="btn btn-primary fw-bolder" href="contact.html">Get a Quote</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer-->
+  <footer class="bg-white py-4 mt-auto">
+    <div class="container px-5">
+      <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+        <div class="col-auto">
+          <div class="small m-0">Copyright &copy; Bryan Chan 2026</div>
+        </div>
+        <div class="col-auto">
+          <a class="small" href="contact.html">Contact</a>
+          <span class="mx-1">&middot;</span>
+          <a class="small" href="projects.html">Projects</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float"
+    href="https://wa.me/19548603752?text=Hi%20Bryan!%20I%E2%80%99m%20interested%20in%20a%20website,%20web%20app,%20or%20mobile%20app%20for%20my%20business.%20Could%20we%20talk?"
+    target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-label">Hi there! Let’s talk</span>
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Reveal JS (Fade + Bounce) -->
+  <script>
+    (function initReveal() {
+      const targets = document.querySelectorAll(".reveal-fade, .reveal-bounce");
+      if (!targets.length) return;
+
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+
+            if (el.classList.contains("reveal-fade")) {
+              if (entry.isIntersecting) el.classList.add("is-visible");
+              else el.classList.remove("is-visible");
+              return;
+            }
+
+            if (el.classList.contains("reveal-bounce")) {
+              if (entry.isIntersecting) {
+                if (el.dataset.played === "1") return;
+                el.dataset.played = "1";
+
+                el.classList.remove("is-visible");
+                void el.offsetWidth;
+                el.classList.add("is-visible");
+              } else {
+                if (entry.intersectionRatio === 0) {
+                  el.dataset.played = "0";
+                  el.classList.remove("is-visible");
+                }
+              }
+            }
+          });
+        },
+        { threshold: [0, 0.15], rootMargin: "0px 0px -15% 0px" }
+      );
+
+      targets.forEach((el) => {
+        el.dataset.played = "0";
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
