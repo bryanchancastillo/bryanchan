@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Pricing | Bryan Chan</title>
+
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+
+  <!-- PNG favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+
+  <!-- Apple Touch Icon (iOS) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+  <!-- Android / PWA icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <!-- Theme color (Android status bar / browser UI) -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- Page-only helpers (match Technology styles) -->
+  <style>
+    /* Match technology.html look & feel */
+
+    .price-muted {
+      color: rgba(0, 0, 0, .62);
+    }
+
+    .price-card {
+      border: 0;
+      border-radius: 1.25rem;
+      box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .06);
+      background: #fff;
+    }
+
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .55rem .85rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .04);
+      font-weight: 700;
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+
+    .price-badge i {
+      opacity: .85;
+    }
+
+    .price-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .45rem .75rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .06);
+      font-weight: 800;
+      font-size: .85rem;
+      white-space: nowrap;
+    }
+
+    .price-pill i {
+      opacity: .85;
+    }
+
+    .price-amount {
+      font-size: 2.15rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin: .25rem 0 .35rem;
+    }
+
+    .price-amount small {
+      font-size: .95rem;
+      font-weight: 700;
+      opacity: .7;
+      margin-left: .35rem;
+    }
+
+    .price-note {
+      color: rgba(0, 0, 0, .62);
+      font-size: .95rem;
+    }
+
+    .price-list .list-group-item {
+      border: 0;
+      background: rgba(0, 0, 0, .03);
+      border-radius: 1rem;
+      margin-bottom: .75rem;
+      padding: 1rem 1.1rem;
+    }
+
+    .price-card hr {
+      opacity: .12;
+    }
+
+    .pricing-badge {
+      border-radius: 999px;
+      padding: .55rem .9rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    @media (max-width: 576px) {
+      .price-amount {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+  <main class="flex-shrink-0">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container px-5">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="assets/bryanlogo.svg" alt="Bryan Chan logo" class="navbar-logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="py-5">
+      <div class="container px-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 text-center">
+
+            <h1 class="display-5 fw-bolder mb-3">
+              <span class="text-gradient d-inline-block reveal-bounce">
+                Simple pricing that converts
+              </span>
+            </h1>
+
+            <p class="lead mb-0 price-muted">
+              Transparent “starting at” pricing. Final cost depends on pages, features, content, and timeline.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PRICING -->
+    <section class="pb-5">
+      <div class="container px-5">
+
+        <div class="row g-4">
+
+          <!-- WEBSITE -->
+          <div class="col-12 col-lg-6">
+            <div class="card price-card h-100 reveal-fade">
+              <div class="card-body p-4 p-md-5">
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                  <span class="price-badge"><i class="bi bi-window"></i> Website</span>
+                  <span class="price-pill"><i class="bi bi-lightning-charge-fill"></i> Most popular</span>
+                </div>
+
+                <h3 class="fw-bolder mb-2">
+                  <span class="text-gradient d-inline">Business Website</span>
+                </h3>
+
+                <p class="price-muted mb-3">
+                  Perfect for local businesses that want a professional online presence and more calls/messages.
+                </p>
+
+                <div class="price-amount">$350 <small>starting at</small></div>
+
+                <p class="price-note mb-4">
+                  ✅ Hosting included for the <strong>first year</strong> • ❌ Domain not included
+                </p>
+
+                <div class="price-list mb-4">
+                  <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Modern design</strong> (mobile-first)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>1–3 sections</strong> (hero, about, services)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>WhatsApp / Call</strong> buttons</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Basic SEO</strong> (Google-friendly)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Fast loading</strong> + image optimization</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row gap-2">
+                  <a class="btn btn-primary fw-bolder w-100" href="contact.html">
+                    Get a Quote
+                  </a>
+                  <a class="btn btn-outline-dark fw-bolder w-100"
+                    href="https://wa.me/19548603752?text=Hi%20Bryan!%20I%E2%80%99m%20interested%20in%20a%20website%20(starting%20at%20%24350).%20Could%20we%20talk%3F"
+                    target="_blank" rel="noreferrer">
+                    WhatsApp Me
+                  </a>
+                </div>
+
+                <hr class="my-4">
+
+                <p class="mb-0 price-note">
+                  Add-ons (optional): extra pages, booking, menu QR, bilingual, copywriting, logo/branding.
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- WEB APP / APPLICATIONS -->
+          <div class="col-12 col-lg-6">
+            <div class="card price-card h-100 reveal-fade">
+              <div class="card-body p-4 p-md-5">
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                  <span class="price-badge"><i class="bi bi-diagram-3"></i> Applications</span>
+                  <span class="price-badge"><i class="bi bi-shield-lock"></i> Custom build</span>
+                </div>
+
+                <h3 class="fw-bolder mb-2">
+                  <span class="text-gradient d-inline">Web App (MVP)</span>
+                </h3>
+
+                <p class="price-muted mb-3">
+                  For businesses that need logins, dashboards, admin panels, payments, or database workflows.
+                </p>
+
+                <div class="price-amount">$1,500 <small>starting at</small></div>
+
+                <p class="price-note mb-4">
+                  Typical MVP range: <strong>$1,500 – $6,000+</strong> depending on features and complexity.
+                </p>
+
+                <div class="price-list mb-4">
+                  <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Auth</strong> (login, roles)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Database</strong> (MySQL / SQL)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Admin panel</strong> (CRUD)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>API integration</strong> (3rd-party)</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                      <div><strong>Deployment</strong> + basic monitoring</div>
+                      <i class="bi bi-check2-circle"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row gap-2">
+                  <a class="btn btn-primary fw-bolder w-100" href="contact.html">
+                    Build My App
+                  </a>
+                  <a class="btn btn-outline-dark fw-bolder w-100"
+                    href="https://wa.me/19548603752?text=Hi%20Bryan!%20I%E2%80%99m%20interested%20in%20a%20web%20app%20(MVP).%20Can%20I%20tell%20you%20what%20I%20need%3F"
+                    target="_blank" rel="noreferrer">
+                    WhatsApp Me
+                  </a>
+                </div>
+
+                <hr class="my-4">
+
+                <p class="mb-0 price-note">
+                  Tip: “starting at” keeps it fair. Apps vary a lot (features, users, permissions, payments, etc.).
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MINI FAQ -->
+        <div class="card price-card mt-4 reveal-fade">
+          <div class="card-body p-4 p-md-5">
+            <h4 class="fw-bolder mb-2">Quick notes</h4>
+            <p class="price-muted mb-3">
+              I can deliver fast when you have content ready (logo, text, photos). If not, I can help with that too.
+            </p>
+            <ul class="mb-0 price-note">
+              <li><strong>Domain:</strong> purchased by client (I can guide you).</li>
+              <li><strong>Hosting:</strong> included for the first year for websites.</li>
+              <li><strong>Payments:</strong> 50% upfront / 50% on delivery (optional policy).</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer-->
+  <footer class="bg-white py-4 mt-auto">
+    <div class="container px-5">
+      <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+        <div class="col-auto">
+          <div class="small m-0">Copyright &copy; Bryan Chan 2026</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float"
+    href="https://wa.me/19548603752?text=Hi%20Bryan!%20I%E2%80%99m%20interested%20in%20a%20website,%20web%20app,%20or%20mobile%20app%20for%20my%20business.%20Could%20we%20talk?"
+    target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-label">Hi there! Let’s talk</span>
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Reveal JS (Fade + Bounce) -->
+  <script>
+    (function initReveal() {
+      const targets = document.querySelectorAll(".reveal-fade, .reveal-bounce");
+      if (!targets.length) return;
+
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+
+            if (el.classList.contains("reveal-fade")) {
+              if (entry.isIntersecting) el.classList.add("is-visible");
+              else el.classList.remove("is-visible");
+              return;
+            }
+
+            if (el.classList.contains("reveal-bounce")) {
+              if (entry.isIntersecting) {
+                if (el.dataset.played === "1") return;
+                el.dataset.played = "1";
+
+                el.classList.remove("is-visible");
+                void el.offsetWidth;
+                el.classList.add("is-visible");
+              } else {
+                if (entry.intersectionRatio === 0) {
+                  el.dataset.played = "0";
+                  el.classList.remove("is-visible");
+                }
+              }
+            }
+          });
+        },
+        { threshold: [0, 0.15], rootMargin: "0px 0px -15% 0px" }
+      );
+
+      targets.forEach((el) => {
+        el.dataset.played = "0";
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+
+</html>
