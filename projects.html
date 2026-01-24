@@ -41,8 +41,11 @@
     <!-- Custom styles -->
     <link href="css/styles.css" rel="stylesheet" />
 
-    <!-- Gallery styles (NEW) -->
+    <!-- Gallery styles -->
     <link href="css/gallery.css" rel="stylesheet" />
+
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 <body class="d-flex flex-column h-100 bg-light">
@@ -66,7 +69,7 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                           <li class="nav-item"><a class="nav-link" href="technology.html">Technology </a></li>
+                        <li class="nav-item"><a class="nav-link" href="technology.html">Technology</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,7 +80,6 @@
             <div class="container px-5">
                 <div class="text-center mb-5">
                     <h1 class="display-5 fw-bolder mb-0">
-                        <!-- IMPORTANT: d-inline-block para que el bounce funcione -->
                         <span class="text-gradient d-inline-block reveal-bounce">Projects</span>
                     </h1>
 
@@ -88,74 +90,67 @@
 
                 <div class="row g-4 justify-content-center">
 
-                    <!-- Project 1 -->
+                    <!-- Project 1: Tia Tania (1 card -> multiple images) -->
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="portfolio-item" role="button" tabindex="0" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="openImage(this)">
+
+                        <!-- Visible card -->
+                        <a href="assets/1.png" class="portfolio-item glightbox" data-gallery="tia-tania"
+                            data-title="tiatania.com" data-description="Landing + Admin Panel + QR Code">
                             <div class="portfolio-card">
-                                <img src="assets/1.png" data-img="assets/2.png" alt="Tia Tania">
+                                <img src="assets/1.png" alt="Tia Tania">
                                 <div class="portfolio-overlay">
                                     <h5 class="fw-bold mb-1">tiatania.com</h5>
                                     <p class="small mb-2">Landing + Admin Panel + QR Code</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+
+        
                     </div>
 
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="portfolio-item" role="button" tabindex="0" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="openImage(this)">
-                            <div class="portfolio-card">
-                                <img src="assets/11.png" data-img="assets/12.png" alt="Tia Tania">
-                                <div class="portfolio-overlay">
-                                    <h5 class="fw-bold mb-1">tiatania.com</h5>
-                                    <p class="small mb-2">Landing + Admin Panel + QR Code</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
+                    <!-- Project 2: Sandra Hartman (single image for now) -->
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="portfolio-item" role="button" tabindex="0" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="openImage(this)">
+                        <a href="assets/2.png" class="portfolio-item glightbox" data-gallery="sandra-hartman"
+                            data-title="sandrahartman.shop" data-description="Landing + QR Code + Whatsapp">
                             <div class="portfolio-card">
-                                <img src="assets/10.png" data-img="assets/9.png" alt="Sandra Hartman">
+                                <img src="assets/2.png" alt="Sandra Hartman">
                                 <div class="portfolio-overlay">
                                     <h5 class="fw-bold mb-1">sandrahartman.shop</h5>
                                     <p class="small mb-2">Landing + QR Code + Whatsapp</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                        <!-- Add more images if you want:
+                        <a href="assets/another.png" class="glightbox d-none" data-gallery="sandra-hartman"></a>
+                        -->
                     </div>
 
-                    <!-- Project 3 -->
+                    <!-- Project 3: Construction Book (single image for now) -->
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="portfolio-item" role="button" tabindex="0" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="openImage(this)">
+                        <a href="assets/5.png" class="portfolio-item glightbox" data-gallery="construction-book"
+                            data-title="constructionbook.online" data-description="App">
                             <div class="portfolio-card">
-                                <img src="assets/5.png" data-img="assets/6.png" alt="Construction Book">
+                                <img src="assets/5.png" alt="Construction Book">
                                 <div class="portfolio-overlay">
                                     <h5 class="fw-bold mb-1">constructionbook.online</h5>
                                     <p class="small mb-2">App</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
-                    <!-- Project 4 -->
+                    <!-- Project 4: El Discipulo (single image for now) -->
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="portfolio-item" role="button" tabindex="0" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="openImage(this)">
+                        <a href="assets/6.png" class="portfolio-item glightbox" data-gallery="el-discipulo"
+                            data-title="eldiscipulo.me" data-description="Social Media">
                             <div class="portfolio-card">
-                                <img src="assets/8.png" data-img="assets/7.png" alt="El Discipulo">
+                                <img src="assets/6.png" alt="El Discipulo">
                                 <div class="portfolio-overlay">
                                     <h5 class="fw-bold mb-1">eldiscipulo.me</h5>
                                     <p class="small mb-2">Social Media</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -172,7 +167,7 @@
 
     </main>
 
-    <!-- Footer-->
+    <!-- Footer -->
     <footer class="bg-white py-4 mt-auto">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
@@ -188,17 +183,6 @@
         </div>
     </footer>
 
-    <!-- IMAGE MODAL (Lightbox) -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content gallery-modal-content">
-                <div class="modal-body p-0 text-center">
-                    <img id="modalImage" src="" class="img-fluid rounded-4" alt="Preview">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- WhatsApp Floating Button -->
     <a class="whatsapp-float"
         href="https://wa.me/19548603752?text=Hi%20Bryan!%20I%E2%80%99m%20interested%20in%20a%20website,%20web%20app,%20or%20mobile%20app%20for%20my%20business.%20Could%20we%20talk?"
@@ -207,21 +191,22 @@
         <i class="bi bi-whatsapp"></i>
     </a>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Gallery JS -->
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Init GLightbox -->
     <script>
-        function openImage(element) {
-            const img = element.querySelector("img");
-            const modalImg = document.getElementById("modalImage");
-            modalImg.src = img.getAttribute("data-img") || img.src;
-        }
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            closeButton: true
+        });
     </script>
 
     <!-- Reveal JS (Fade + Bounce) -->
-
     <script>
         (function initReveal() {
             const targets = document.querySelectorAll(".reveal-fade, .reveal-bounce");
@@ -247,14 +232,13 @@
                         // BOUNCE: solo al "entrar" (una vez), y se resetea cuando sale 100%
                         if (el.classList.contains("reveal-bounce")) {
                             if (entry.isIntersecting) {
-                                if (el.dataset.played === "1") return; // ya se animó en esta entrada
+                                if (el.dataset.played === "1") return;
                                 el.dataset.played = "1";
 
                                 el.classList.remove("is-visible");
                                 void el.offsetWidth; // reset animation
                                 el.classList.add("is-visible");
                             } else {
-                                // si ya NO está intersectando en nada, permite que se anime otra vez al volver
                                 if (entry.intersectionRatio === 0) {
                                     el.dataset.played = "0";
                                     el.classList.remove("is-visible");
@@ -264,7 +248,7 @@
                     });
                 },
                 {
-                    threshold: [0, 0.15],      // evita spam
+                    threshold: [0, 0.15],
                     rootMargin: "0px 0px -15% 0px"
                 }
             );
@@ -275,7 +259,6 @@
             });
         })();
     </script>
-
 
 </body>
 
