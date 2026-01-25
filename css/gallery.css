@@ -19,6 +19,7 @@
 }
 
 /* OVERLAY SIEMPRE VISIBLE */
+/* OVERLAY SIEMPRE VISIBLE - PLAIN */
 .portfolio-overlay {
     position: absolute;
     inset: 0;
@@ -27,12 +28,7 @@
     justify-content: flex-end;
     padding: 1.1rem;
     color: #fff;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.35),
-        rgba(0, 0, 0, 0)
-    );
+    background: transparent;   /* ✅ SIN gradient */
     opacity: 1;
     transform: translateY(10px);
     transition: transform 0.35s ease;
