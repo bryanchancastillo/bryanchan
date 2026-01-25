@@ -3,26 +3,29 @@
     position: relative;
     overflow: hidden;
     border-radius: 1.25rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     background: #fff;
     cursor: pointer;
+    box-shadow: none;
 }
 
 .portfolio-card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
-    transition: transform 0.45s ease;
     display: block;
+    transition: transform 0.45s ease;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
+/* OVERLAY SIEMPRE VISIBLE */
 .portfolio-overlay {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 1.25rem;
+    padding: 1.1rem;
     color: #fff;
     background: linear-gradient(
         to top,
@@ -30,23 +33,46 @@
         rgba(0, 0, 0, 0.35),
         rgba(0, 0, 0, 0)
     );
-    opacity: 0;
+    opacity: 1;
     transform: translateY(10px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    transition: transform 0.35s ease;
 }
 
+/* TEXTO MÁS PEQUEÑO */
+.portfolio-overlay h5 {
+    font-size: 0.95rem;      /* antes ~1.25rem */
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.portfolio-overlay p {
+    font-size: 0.75rem;      /* antes ~0.9rem */
+    line-height: 1.3;
+    opacity: 0.9;
+}
+
+/* ANIMACIÓN AL HOVER */
 .portfolio-item:hover .portfolio-card img {
     transform: scale(1.08);
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
     transform: translateY(0);
 }
 
+/* RESPONSIVE */
 @media (min-width: 992px) {
     .portfolio-card img {
         height: 300px;
+    }
+
+    /* un pelín más grande en desktop */
+    .portfolio-overlay h5 {
+        font-size: 1rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.8rem;
     }
 }
 
@@ -66,28 +92,19 @@
     to { transform: scale(1); opacity: 1; }
 }
 
-
-
 /* Make backdrop darker */
 .modal-backdrop.show {
     opacity: 0.85;
 }
 
-
 /* === FIX click / focus portfolio === */
 .portfolio-item {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .portfolio-item:focus,
 .portfolio-item:active,
 .portfolio-item:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Evita selección visual de la imagen */
-.portfolio-card img {
-  user-select: none;
-  -webkit-user-drag: none;
+    outline: none;
+    box-shadow: none;
 }
